@@ -4,7 +4,7 @@
 ```rb
 gem install youtube-captions
 ```
-
+or add to gemfile
 ```rb
 gem "youtube-captions"
 ```
