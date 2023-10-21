@@ -1,9 +1,11 @@
-Gem::Specification.new do |s|
-  s.authors = ["Kevin S."]
-  s.files = Dir["lib/**/*.rb"]
-  s.name = "youtube-captions"
-  s.summary = "A gem to get captions of a youtube video"
-  s.version = "0.0.4"
-  s.add_runtime_dependency "httparty"
-  s.homepage = "https://github.com/sevinchek/youtube-captions"
+Gem::Specification.new do |gem|
+  gem.authors = ["Kevin S."]
+  gem.files = Dir["lib/**/*.rb"]
+  gem.name = "youtube-captions"
+  gem.summary = "A gem to get captions of a youtube video"
+  gem.version = "1.0.0"
+  gem.required_ruby_version = '>=2.3.0'
+  gem.add_runtime_dependency "httparty"
+  gem.add_development_dependency "rspec"
+  gem.homepage = "https://github.com/sevinchek/youtube-captions"
 end

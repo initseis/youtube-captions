@@ -10,18 +10,39 @@ gem "youtube-captions"
 ```
 
 ## Usage
-Get captions with default language
 ```rb
-YoutubeCaptions.new(id: "mpWFrUwAN88").call
+# "id" can be video url
+video = YoutubeCaptions::Video.new(id: "abc123")
 ```
-
-Get captions with specific language (must be available)
+### Captions with default language
 ```rb
-YoutubeCaptions.new(id: "74ijsBhbxSQ", lang: "es").call
+=> video.captions
+=> [
+  {
+    "__content__" => "Welcome to Ruby",
+    "start" => "0.16",
+    "dur" => "3.92"
+  }
+  ...
+]
 ```
-
-## To-do
-Get available languages of a video
+### Captions with specific language (must be available)
+```rb
+=> video.captions(lang: "es")
+=> [
+  {
+    "__content__" => "Bienvenido a Ruby",
+    "start" => "0.16",
+    "dur" => "3.92"
+  }
+  ...
+]
+```
+### Available languages
+```rb
+=> video.available_langs
+=> ["es", "en", "pt"]
+```
 
 ## Contributing
 
